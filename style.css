@@ -10,6 +10,38 @@
     scroll-behavior: smooth;
   }
   
+
+  
+ /* * Media Queries: Tablet Landscape * */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* html { font-size:100%; } */
+/* @media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1rem;} } 
+@media (min-width:1100px) { body {font-size:1rem;} }  */
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width:568px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+img { max-width: 100%; height: auto; }
+
+
+@media (min-device-width:600px) {
+  img[data-src-600px] {
+      content: attr(data-src-600px, url);
+  }
+}
+
+@media (min-device-width:800px) {
+  img[data-src-800px] {
+      content: attr(data-src-800px, url);
+  }
+}
   .btn {
     margin-bottom: 0%;
     margin-top: 20px;
@@ -114,6 +146,30 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  marquee{
+    background-color: var(--first-color);
+    color:#fff;
+    padding-top:3px;
+    padding-bottom:3px;
+    position:relative; 
+    top:0;
+    left:0;
+    z-index:100;
+  }
+  marquee em{
+    margin-right:10%;
+  }
+  div.maq{
+    width:80%;
+    margin:0 auto;
+  }
+  div.maq span{
+    color:#fff;
+    font-size: 22px;
+    padding-right:10px;
+    transform:translateY(10%);
   }
   /*Home Page*/
   .home {
@@ -306,6 +362,10 @@
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+  .card:hover{
+    background-color: rgb(243, 235, 235);
+    transform: 3s;
   }
   .card__btn a:hover {
     background-color: white;
